@@ -1,0 +1,73 @@
+.wave-effect {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: wave 6s infinite linear;
+    z-index: 1;
+}
+
+@keyframes wave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel:hover img {
+    transform: scale(1.05);
+}
+
+.gradient-background {
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .responsive {
+        flex-direction: column;
+    }
+}
+
+.animation {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Add more styles as needed for different components */
